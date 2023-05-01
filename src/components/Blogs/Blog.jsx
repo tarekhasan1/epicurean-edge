@@ -1,16 +1,17 @@
 import React from 'react';
-import './SignUp.css'
 import NavigationBar from '../Navbar/NavigationBar';
 import Footer from '../Footer/Footer';
 
-const SignUp = () => {
+const Blog = () => {
     return (
         <div>
         <NavigationBar></NavigationBar>
-            this is signup page
+            <div>
+            <h3>Questions will goes here</h3>
+            </div>
             <Footer></Footer>
         </div>
     );
 };
 
-export default SignUp;
+export default Blog;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavDropdown, Container, Nav, Navbar, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
     return (
@@ -12,13 +13,12 @@ const NavigationBar = () => {
           <Nav className="mx-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="/chefs">Chefs</Nav.Link>
-            <Nav.Link href="/recipes">Recipes</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#memes">
-            <Button variant="secondary">Register</Button>
-            </Nav.Link>
+            <Link to="/signup">
+            <Button variant="secondary">Sign Up</Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
