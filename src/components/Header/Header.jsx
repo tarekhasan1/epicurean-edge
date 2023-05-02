@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div>
       <div className="h-50 corousel-container">
-        <Carousel variant="dark" fade>
+        <Carousel fade>
           <Carousel.Item>
             <img
               height={500}
@@ -18,8 +18,8 @@ const Header = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h1 className="corousel-title">Epicurean Edge Will Serve You The Best</h1>
+              <p className="corousel-description">There is no sincerer love than the love of food</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -30,8 +30,8 @@ const Header = () => {
             />
 
             <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h1 className="corousel-title">Food For Your Soul</h1>
+              <p className="corousel-description">Food for the body is not enough. There must be food for the soul.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -42,9 +42,9 @@ const Header = () => {
             />
 
             <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              <h1 className="corousel-title">You Will Get The Best Chefs Of Thailand in Epicurean Edge</h1>
+              <p className="corousel-description">
+              If Epicurean Edge cooks Thai food, why should you go to anywhere else?
               </p>
             </Carousel.Caption>
           </Carousel.Item>
