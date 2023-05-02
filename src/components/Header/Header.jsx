@@ -8,7 +8,7 @@ import corousel3 from "../../assets/corousel3.jpg";
 const Header = () => {
   return (
     <div>
-      <div className="h-50">
+      <div className="h-50 corousel-container">
         <Carousel variant="dark" fade>
           <Carousel.Item>
             <img

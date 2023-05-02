@@ -1,0 +1,9 @@
+.corousel-container{
+    width: 100vw;
+    /* height: 400px; */
+}
+
+.corousel-container img{
+    width: 100%;
+    height: 50vh;
+}
