@@ -1,0 +1,23 @@
+footer {
+    background-color: #2c3e50;
+}
+
+footer a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+footer div .home:hover {
+    color: #000;
+    transform: scale(1.5);
+}
+
+footer a i {
+    transition: 0.4s;
+}
+
+footer a i:hover {
+    color: #ecf0f1;
+    transform: scale(1.5);
+}

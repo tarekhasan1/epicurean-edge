@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavDropdown, Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './NavigationBar.css'
 
 const NavigationBar = () => {
     return (
         <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" className='background-color' variant='dark'>
       <Container>
         <Navbar.Brand href="/">Epicurean-Edge</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

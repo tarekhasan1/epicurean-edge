@@ -5,8 +5,8 @@ import Footer from '../Footer/Footer';
 const Blog = () => {
     return (
         <div>
-            <div>
-            <h3>Questions will goes here</h3>
+            <div className='text-center'>
+            <h3>Blog</h3>
             </div>
         </div>
     );
