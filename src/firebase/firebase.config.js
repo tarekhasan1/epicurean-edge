@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDeRakTRRjRe_OfTzwWxOiDOvYPBE8SMlE",
-  authDomain: "epicurean-edge.firebaseapp.com",
-  projectId: "epicurean-edge",
-  storageBucket: "epicurean-edge.appspot.com",
-  messagingSenderId: "770315768652",
-  appId: "1:770315768652:web:2a2dcf15a5a0df5c8735e9"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_AUTHDOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
