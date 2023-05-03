@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import "./Login.css";
 import { Button, Container, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
+    const navigate = useNavigate();
 
 
     const handleLogin = event =>{
@@ -19,6 +20,7 @@ const Login = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
+            navigate('/');
         })
         .catch(error =>{
             console.log(error);
