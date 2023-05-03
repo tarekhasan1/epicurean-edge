@@ -4,11 +4,12 @@ import Footer from "../components/Footer/Footer";
 import Chefs from "../components/Chefs/Chefs";
 import NavigationBar from "../components/Navbar/NavigationBar";
 import { Outlet } from "react-router-dom";
+import './Main.css'
 
 const Main = () => {
   return (
-    <div>
-      <NavigationBar></NavigationBar>
+    <div className="bg-color">
+    <NavigationBar></NavigationBar>
       <Outlet></Outlet>
       <Footer></Footer>
     </div>
