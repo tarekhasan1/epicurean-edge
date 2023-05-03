@@ -9,6 +9,7 @@ const SignUp = () => {
 
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const [accepted, setAccepted] = useState(false);
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -31,8 +32,12 @@ const SignUp = () => {
         })
     }
 
+    const handleAccepted = event => {
+        setAccepted(event.target.checked);
+    }
+
     return (
-        <div className='height-control'>
+        <div>
         <div className='container'>
         <h2 className='text-center mt-3'>Sign Up</h2>
         <Form onSubmit={handleRegister} className="w-50 mx-auto">
@@ -57,9 +62,13 @@ const SignUp = () => {
           <Form.Control type="password" name="confirm" placeholder="Confirm Password" />
         </Form.Group>
         <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-        <Form.Check type='checkbox' name='accept' label="Accept Terms and Conditions"></Form.Check>
+        <Form.Check 
+        onClick={handleAccepted}
+        type='checkbox'
+         name='accept'
+         label="Accept Terms and Conditions"></Form.Check>
         </Form.Group>
-        <input className="btn btn-secondary px-5 mb-3" type="submit" name="submit" id="submit" />
+        <input disabled={!accepted} className="btn btn-secondary px-5 mb-3" type="submit" name="submit" id="submit" />
         <p>Already have an account? <Link to='/login'>Login</Link></p>
         <p className='text-error text-danger'>error message</p>
       </Form>
