@@ -26,7 +26,7 @@ const NavigationBar = () => {
           <Nav className="mx-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/contact">Contact Us</Nav.Link>
           </Nav>
           <Nav>
           {
@@ -35,8 +35,8 @@ const NavigationBar = () => {
             {user ? <Link  className='d-flex align-items-center text-decoration-none'>
             <Button onClick={handleLogout} variant="secondary">Log Out</Button>
             </Link>:
-            <Link to="/signup">
-            <Button variant="secondary">Sign Up</Button>
+            <Link to="/login">
+            <Button variant="secondary">Log In</Button>
             </Link>}
           </Nav>
         </Navbar.Collapse>

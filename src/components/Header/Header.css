@@ -6,12 +6,12 @@
 .corousel-container img{
     width: 100%;
     height: 70vh;
+    opacity: 0.4;
 }
-
 .corousel-title{
-    color: black;
+    color: rgb(202, 216, 230);
     font-weight: 900;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px rgb(12, 7, 58);
 }
 
 .corousel-description{

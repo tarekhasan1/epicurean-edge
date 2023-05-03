@@ -29,7 +29,7 @@ const RecipeCard = (props) => {
             }
         </ol>
         <p>ratings: {rating}/5</p>
-        <Button className='mb-3 w-50' variant="outline-secondary">Add to Favourite</Button>
+        <Button className='mb-3 w-50' variant="outline-danger">Add to Favourite</Button>
         </Col>
         </Row>
         </Col>

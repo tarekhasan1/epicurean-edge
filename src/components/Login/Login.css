@@ -1,3 +1,7 @@
-.height-control{
-    height: calc(100vh - 129px);
+.register-btn{
+    color: #aeb0e6;
+}
+
+.register-btn:hover{
+    color: #10ea6e;
 }

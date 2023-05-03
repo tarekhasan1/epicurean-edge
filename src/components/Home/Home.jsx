@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div>
         <Header></Header>
-            <div className='chef-card row m-0 p-2'>
+            <div className='container  mx-auto chef-card row m-0 p-2'>
             <h2 className='text-center my-4 pt-4'>Thailand's Best Food Crafters</h2>
             <p className='mb-5 pb-3 text-center'>Cooking is like painting or writing a song. Just as there are only so many notes or colors, there are only so many flavors—it’s how you combine them that sets you apart.</p>
             {

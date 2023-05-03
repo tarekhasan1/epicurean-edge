@@ -8,7 +8,7 @@ const Chefs = (props) => {
     const navigate = useNavigate();
 
     return (
-        <div className='col-sm-12 col-md-6 col-lg-4 p-2'>
+        <div className='chef-card-height col-sm-12 col-md-6 col-lg-4 p-2'>
         <div className='mb-4 card-bg rounded-3'>
         <div className="card-img-container">
         <img className='chef-photo' src={image} alt="" />
@@ -23,7 +23,7 @@ const Chefs = (props) => {
         <div className='mx-auto text-center'>
         <button onClick={() =>{
             navigate(`/recipes/${id}`)
-        }} className='btn btn-secondary mx-auto w-75 py-3 rounded-3 m-2'>View Recipes</button>
+        }} className='btn btn-success mx-auto w-75 py-2 rounded-3 m-3'>View Recipes</button>
         </div>
         </div>
         </div>

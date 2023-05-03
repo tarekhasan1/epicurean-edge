@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div>
       <div className="corousel-container">
-        <Carousel fade>
+        <Carousel>
           <Carousel.Item>
             <img
               height={500}
@@ -22,7 +22,7 @@ const Header = () => {
               <p className="corousel-description">There is no sincerer love than the love of food</p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className="bg-dark">
             <img
               className="d-block img-fluid"
               src={corousel2}

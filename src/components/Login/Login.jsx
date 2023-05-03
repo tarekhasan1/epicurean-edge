@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./Login.css";
 import { Button, Container, Form } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
@@ -9,6 +9,8 @@ const Login = () => {
 
     const [error, setError] = useState();
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from.pathname || '/';
 
 
     const handleLogin = event =>{
@@ -23,7 +25,7 @@ const Login = () => {
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
-            navigate('/');
+            navigate(from, {replace: true});
         })
         .catch(err =>{
             console.log(err);
@@ -53,11 +55,11 @@ const Login = () => {
             </Form.Text>
         }
         <div className="text-center">
-        <Button className="px-5 mb-3" variant="outline-secondary">Sign in with Google</Button>
+        <Button className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-google"></i> Sign in with Google</Button>
         <br />
-        <Button className="px-5 mb-3" variant="outline-secondary">Sign in with Github</Button>
+        <Button className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-github"></i> Sign in with Github</Button>
         </div>
-        <p>Don't have an Account? <Link to='/signup'>Register</Link></p>
+        <p>Don't have an Account? <Link className="fs-3 register-btn" to='/signup'> Register</Link></p>
       </Form>
     </Container>
     </div>
