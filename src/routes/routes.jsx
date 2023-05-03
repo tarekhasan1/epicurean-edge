@@ -7,6 +7,7 @@ import SignUp from "../components/SignUp/SignUp";
 import Blog from "../components/Blogs/Blog";
 import Home from "../components/Home/Home";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import chefsLoader from "../loaders/ChefsLoader";
 
 
 const router = createBrowserRouter([
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: chefsLoader
             },
             {
                 path: '/blog',

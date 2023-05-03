@@ -2,3 +2,10 @@
     background-color: #34495e;
     color: white;
 }
+.main{
+    min-height: 100vh;
+}
+
+.height-control{
+    height: calc(100vh - 129px);
+}

@@ -33,6 +33,7 @@ const Login = () => {
 
 
   return (
+    <div className="d-flex align-items-center justify-content-center height-control">
     <Container className="mx-auto w-50">
       <h2 className="text-center">Please Login</h2>
       <Form onSubmit={handleLogin}>
@@ -59,6 +60,7 @@ const Login = () => {
         <p>Don't have an Account? <Link to='/signup'>Register</Link></p>
       </Form>
     </Container>
+    </div>
   );
 };
 

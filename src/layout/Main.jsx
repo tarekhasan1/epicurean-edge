@@ -8,7 +8,7 @@ import './Main.css'
 
 const Main = () => {
   return (
-    <div className="bg-color">
+    <div className="bg-color main">
     <NavigationBar></NavigationBar>
       <Outlet></Outlet>
       <Footer></Footer>

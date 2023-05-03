@@ -32,7 +32,7 @@ const SignUp = () => {
     }
 
     return (
-        <div>
+        <div className='height-control'>
         <div className='container'>
         <h2 className='text-center mt-3'>Sign Up</h2>
         <Form onSubmit={handleRegister} className="w-50 mx-auto">
@@ -61,7 +61,7 @@ const SignUp = () => {
         </Form.Group>
         <input className="btn btn-secondary px-5 mb-3" type="submit" name="submit" id="submit" />
         <p>Already have an account? <Link to='/login'>Login</Link></p>
-        <p className='text-error'>error message</p>
+        <p className='text-error text-danger'>error message</p>
       </Form>
     </div>
         </div>
