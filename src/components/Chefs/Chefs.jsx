@@ -1,19 +1,25 @@
 import React from 'react';
 import './Chefs.css'
 
-const Chefs = () => {
+const Chefs = (props) => {
+    console.log('card', props.chef);
+    const {name, image, bio, description, numRecipes, rating, experience } = props.chef;
+
     return (
         <div className='col-sm-12 col-md-6 col-lg-4 p-2'>
         <div className='mb-4 border bg-dark rounded-3'>
-        <img className='chef-photo rounded-3' src="https://img.freepik.com/free-vector/detailed-chef-logo-template_23-2148987940.jpg?w=2000" alt="" />
+        <div className="card-img-container">
+        <img className='chef-photo' src={image} alt="" />
+        </div>
         <div className='p-3'>
-        <h2>Chef Name</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis laboriosam, culpa, porro, necessitatibus excepturi ex et quaerat qui natus veniam perferendis hic iusto?</p>
-        <p>Years Of Experience:</p>
-        <p>Number of recipes:</p>
+        <h2>{name}</h2>
+        <p>{bio}</p>
+        <p>Number of recipes:{numRecipes}</p>
+        <p>Experience: {experience}</p>
+        <p>Rating: {rating}</p>
         </div>
         <div className='mx-auto text-center'>
-        <button className='btn btn-secondary mx-auto mb-2 w-50 py-2'>View Recipes</button>
+        <button className='btn btn-success mx-auto w-75 py-3 rounded-3 m-2'>View Recipes</button>
         </div>
         </div>
         </div>
