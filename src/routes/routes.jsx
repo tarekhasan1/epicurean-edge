@@ -8,6 +8,8 @@ import Blog from "../components/Blogs/Blog";
 import Home from "../components/Home/Home";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import chefsLoader from "../loaders/ChefsLoader";
+import Recipes from "../components/Recipes/Recipes";
+import recipesLoader from "../loaders/recipesLoader";
 
 
 const router = createBrowserRouter([
@@ -32,6 +34,11 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/recipes/:chefId',
+                element: <Recipes></Recipes>,
+                loader: recipesLoader
             }
         ]
     }

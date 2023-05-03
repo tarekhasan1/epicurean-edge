@@ -8,3 +8,23 @@
     border-radius: 10px;
 }
 
+.card-bg{
+    background-color: #0c242b;
+}
+
+.chef-name{
+    color: #dae8e2a2;
+}
+
+.chef-bio{
+    color: #dae8e2a2;
+}
+
+.recipe-number{
+    color: #b191b3a2;
+}
+
+.chef-experience{
+    color: #39f581a2;
+}
+
