@@ -1,6 +1,4 @@
 import React from 'react';
-import NavigationBar from '../Navbar/NavigationBar';
-import Footer from '../Footer/Footer';
 
 const Blog = () => {
     return (

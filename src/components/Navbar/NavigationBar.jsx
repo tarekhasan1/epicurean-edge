@@ -30,9 +30,9 @@ const NavigationBar = () => {
           </Nav>
           <Nav>
           {
-            user && <Nav.Link href="#"><i class="fa-solid fa-circle-user fs-3"></i></Nav.Link>
+            user && <Nav.Link href="#"><i class="fa-solid fa-circle-user fs-2"></i></Nav.Link>
           }
-            {user ? <Link>
+            {user ? <Link  className='d-flex align-items-center text-decoration-none'>
             <Button onClick={handleLogout} variant="secondary">Log Out</Button>
             </Link>:
             <Link to="/signup">

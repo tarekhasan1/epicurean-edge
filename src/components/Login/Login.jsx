@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Login.css";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,6 +6,8 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
+
+    const [error, setError] = useState();
     const navigate = useNavigate();
 
 
@@ -16,14 +18,16 @@ const Login = () => {
         const password = form.password.value;
 
         console.log(email, password);
+        setError("");
         signIn(email,password)
         .then(result =>{
             const loggedUser = result.user;
             console.log(loggedUser);
             navigate('/');
         })
-        .catch(error =>{
-            console.log(error);
+        .catch(err =>{
+            console.log(err);
+            setError("Login Failed! Try Again");
         })
     }
 
@@ -42,9 +46,11 @@ const Login = () => {
         </Form.Group>
         <p>Hide Password</p>
         <input className="btn btn-secondary px-5 mb-3" type="submit" name="submit" id="submit" /><br />
-        <Form.Text className="text-danger">
-        error message
-        </Form.Text>
+        {
+            error && <Form.Text className="text-danger">
+            {error}
+            </Form.Text>
+        }
         <div className="text-center">
         <Button className="px-5 mb-3" variant="outline-secondary">Sign in with Google</Button>
         <br />

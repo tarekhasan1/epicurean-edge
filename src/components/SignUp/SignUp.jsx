@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './SignUp.css'
-import NavigationBar from '../Navbar/NavigationBar';
 import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
@@ -9,6 +8,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 const SignUp = () => {
 
     const { createUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
 
     const handleRegister = event =>{
         event.preventDefault();
@@ -27,6 +27,7 @@ const SignUp = () => {
         })
         .catch(error =>{
             console.log(error);
+            setError(error);
         })
     }
 
