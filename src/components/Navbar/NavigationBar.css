@@ -1,3 +1,9 @@
 .background-color{
     background-color: #080a3f;
 }
+
+.img-control{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

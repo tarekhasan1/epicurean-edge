@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Chefs from '../Chefs/Chefs';
 import './Home.css'
 import { useLoaderData } from 'react-router-dom';
+import CustomerTestimonials from '../CustomerTestimonials/CustomerTestimonials';
 
 const Home = () => {
 
@@ -17,6 +18,9 @@ const Home = () => {
             {
                 chefs.map(chef => <Chefs chef={chef} key={chef.id}></Chefs>)
             }
+            </div>
+            <div className='container-fluid my-5 testimonials-container'>
+            <CustomerTestimonials></CustomerTestimonials>
             </div>
         </div>
     );

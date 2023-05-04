@@ -14,8 +14,9 @@ const AuthProvider = ({children}) => {
     const signInWithGoogle = () =>{
         signInWithPopup(auth, provider)
         .then(result =>{
-            const user = result.user;
-            console.log(user);
+            const loggedInUser = result.user;
+            console.log(loggedInUser);
+            setUser(loggedInUser);
         })
         .catch(error =>{
             console.log(error);

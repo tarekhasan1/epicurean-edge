@@ -1,0 +1,52 @@
+.testimonials-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .testimonials-banner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .heading-color{
+    color: #01172d;
+    -webkit-text-stroke: 1px #fffbfb;
+    font-weight: 900;
+  }
+  
+  .testimonial-card {
+    border: none;
+    margin-bottom: 2rem;
+    background-color: #09694d;
+    color: aliceblue;
+  }
+  
+  .testimonial-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-muted-color{
+    color: rgb(154, 154, 130);
+  }
+  

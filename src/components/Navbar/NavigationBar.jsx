@@ -30,7 +30,7 @@ const NavigationBar = () => {
           </Nav>
           <Nav>
           {
-            user && <Nav.Link href="#"><i className="fa-solid fa-circle-user fs-2"></i></Nav.Link>
+            user ? <Nav.Link><i className="fa-solid fa-circle-user fs-2"></i></Nav.Link> : <Nav.Link href="#"><img className='img-control' src={user} alt="" /></Nav.Link>
           }
             {user ? <Link  className='d-flex align-items-center text-decoration-none'>
             <Button onClick={handleLogout} variant="secondary">Log Out</Button>

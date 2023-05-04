@@ -11,6 +11,7 @@ import chefsLoader from "../loaders/ChefsLoader";
 import Recipes from "../components/Recipes/Recipes";
 import recipesLoader from "../loaders/recipesLoader";
 import PrivateRoute from "./PrivateRoute";
+import CustomerTestimonials from "../components/CustomerTestimonials/CustomerTestimonials";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
                 path: '/recipes/:chefId',
                 element: <PrivateRoute><Recipes></Recipes></PrivateRoute>,
                 loader: recipesLoader
+            },
+            {
+                path: '/testimonials',
+                element: <CustomerTestimonials></CustomerTestimonials>
             }
         ]
     }

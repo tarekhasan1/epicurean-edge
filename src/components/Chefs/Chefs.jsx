@@ -18,7 +18,7 @@ const Chefs = (props) => {
         <p className='chef-experience'><small>{experience}  Years Of Experience</small></p>
         <p className='chef-bio'>{bio}</p>
         <p className='recipe-number'>Number of recipes: {numRecipes}</p>
-        <p className='text-danger'>Likes: {likes}</p>
+        <p className='text-secondary'><i className="fa-sharp fa-solid text-danger fa-heart"> </i> {likes}</p>
         </div>
         <div className='mx-auto text-center'>
         <button onClick={() =>{
