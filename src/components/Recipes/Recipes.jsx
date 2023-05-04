@@ -12,6 +12,7 @@ const Recipes = () => {
   return (
     <div className="recipe-card-font-color">
       <Container className="p-4 my-4 mx-auto">
+        <div className="chefs-banner chefs-bg">
         <Row className="p-2 mb-5">
           <Col sm={6} className="p-5">
           <img src={chefData.image} alt="" />
@@ -26,6 +27,7 @@ const Recipes = () => {
           </div>
           </Col>
         </Row>
+        </div>
         <h1 className="text-center my-3">Most Popular recipes of {chefData.name}</h1>
         {
             recipeData.map(recipe => <RecipeCard recipe={recipe} key={recipe.id}></RecipeCard>)

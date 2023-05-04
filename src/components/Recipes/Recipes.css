@@ -15,3 +15,19 @@ img{
 .recipe-card-font-color{
     color: #e2d4d4;
 }
+
+.chefs-banner {
+    /* height: 500px; */
+    background-position: center;
+    background-size: cover;
+    padding: 0 20px;
+    border-radius: 15px;
+    /* margin-bottom: 30px; */
+  }
+  
+  .chefs-bg {
+    background-image: url('https://assets.isu.pub/document-structure/230418062630-e85346053f1877bc32bae7d5953a699b/v1/512546d0ed1d5e5556cdb91ba57c3196.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }

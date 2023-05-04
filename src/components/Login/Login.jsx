@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-    const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const { signIn, signInWithGoogle,signInWithGithub } = useContext(AuthContext);
 
     const [error, setError] = useState();
     const navigate = useNavigate();
@@ -35,8 +35,29 @@ const Login = () => {
 
 
     const handleSignInWithGoogle = () =>{
-        signInWithGoogle();
-        navigate('/');
+       signInWithGoogle()
+       
+       .then(result =>{
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        navigate(from, {replace: true});
+    })
+    .catch(error =>{
+        console.log(error);
+    })
+    }
+
+
+    const handleGithubSignIn = () =>{
+        console.log('clicked git')
+        signInWithGithub()
+        .then(result =>{
+            const loggedUser = result.user;
+            navigate(from, {replace: true});
+        })
+        .catch(error =>{
+            console.log(error);
+        })
     }
 
 
@@ -63,7 +84,7 @@ const Login = () => {
         <div className="text-center">
         <Button onClick={handleSignInWithGoogle} className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-google"></i> Sign in with Google</Button>
         <br />
-        <Button className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-github"></i> Sign in with Github</Button>
+        <Button onClick={handleGithubSignIn} className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-github"></i> Sign in with Github</Button>
         </div>
         <p>Don't have an Account? <Link className="fs-3 register-btn" to='/signup'> Register</Link></p>
       </Form>

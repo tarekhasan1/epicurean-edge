@@ -16,9 +16,8 @@
   }
 
   .heading-color{
-    color: #01172d;
-    -webkit-text-stroke: 1px #fffbfb;
-    font-weight: 900;
+    color: rgb(244, 244, 247);
+    font-weight: 700;
   }
   
   .testimonial-card {

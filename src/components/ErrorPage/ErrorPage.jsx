@@ -13,7 +13,7 @@ const ErrorPage = () => {
                 <div>
                 <img className='img-fluid' src="https://cdn.dribbble.com/users/1818132/screenshots/4264991/media/d625b6be8b5ae2a1aa080d1bbc560e0a.gif" alt="" />
                 </div>
-                    <div className='border rounded text-center'>
+                    <div className='rounded text-center'>
                     <i className="fw-bold fs-3">
                         {error.statusText || error.message}
                     </i>

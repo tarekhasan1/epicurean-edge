@@ -31,11 +31,6 @@ const CustomerTestimonials = () => {
       <div className="testimonials-banner text-success rounded-3" style={{ backgroundImage: `url(${bannerImage})` }}>
         <div className="container-fluid py-5">
           <div className="row justify-content-center">
-            <div className="col-md-8 text-center my-4">
-              <h1 className='heading-color'>What Our Customers Say About Us</h1>
-            </div>
-          </div>
-          <div className="row justify-content-center">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="col-md-4">
                 <div className="card testimonial-card">
