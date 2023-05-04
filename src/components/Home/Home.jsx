@@ -4,6 +4,7 @@ import Chefs from '../Chefs/Chefs';
 import './Home.css'
 import { useLoaderData } from 'react-router-dom';
 import CustomerTestimonials from '../CustomerTestimonials/CustomerTestimonials';
+import PreBookSection from '../PreBookSection/PreBookSection';
 
 const Home = () => {
 
@@ -21,6 +22,9 @@ const Home = () => {
             </div>
             <div className='container-fluid my-5 testimonials-container'>
             <CustomerTestimonials></CustomerTestimonials>
+            </div>
+            <div>
+            <PreBookSection></PreBookSection>
             </div>
         </div>
     );
