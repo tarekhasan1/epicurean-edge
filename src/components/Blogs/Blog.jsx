@@ -1,7 +1,23 @@
-import React from "react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import React, { useRef } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 
 const Blog = () => {
+  const divRef = useRef();
+
+    const handleDownload = () => {
+        const divElement = divRef.current;
+        html2canvas(divElement).then((canvas) => {
+            const imgData = canvas.toDataURL("image/png");
+            const pdf = new jsPDF("landscape", "pt", [792, 1224]);
+            pdf.addImage(imgData, "PNG", 0, 0);
+            pdf.save("AnswersByTarekHasan.pdf");
+        });
+    };
+
+
+
   return (
     <div>
       <div>
@@ -10,11 +26,12 @@ const Blog = () => {
         </header>
         <Container>
           <div className="text-center">
-            <Button variant="outline-danger" size="lg" className="mt-3 mb-3">
+            <Button onClick={handleDownload} variant="outline-danger" size="lg" className="mt-3 mb-3">
               Download PDF
             </Button>
           </div>
-          <Card className="mt-3 bg-success">
+         <div ref={divRef}>
+         <Card className="mt-3 bg-success">
             <Card.Body>
               <Card.Title>
                 1. Tell us the differences between uncontrolled and controlled
@@ -102,6 +119,7 @@ const Blog = () => {
               </Card.Text>
             </Card.Body>
           </Card>
+         </div>
         </Container>
       </div>
     </div>
