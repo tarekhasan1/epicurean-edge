@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
 
     const [error, setError] = useState();
     const navigate = useNavigate();
@@ -34,6 +34,12 @@ const Login = () => {
     }
 
 
+    const handleSignInWithGoogle = () =>{
+        signInWithGoogle();
+        navigate('/');
+    }
+
+
   return (
     <div className="d-flex align-items-center justify-content-center height-control">
     <Container className="mx-auto w-50">
@@ -55,7 +61,7 @@ const Login = () => {
             </Form.Text>
         }
         <div className="text-center">
-        <Button className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-google"></i> Sign in with Google</Button>
+        <Button onClick={handleSignInWithGoogle} className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-google"></i> Sign in with Google</Button>
         <br />
         <Button className="px-5 mb-3" variant="outline-secondary"><i className="fa-brands fa-github"></i> Sign in with Github</Button>
         </div>
