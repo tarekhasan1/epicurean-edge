@@ -1,4 +1,6 @@
 import React from 'react';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import './Chefs.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -11,7 +13,7 @@ const Chefs = (props) => {
         <div className='chef-card-height col-sm-12 col-md-6 col-lg-4 p-2'>
         <div className='mb-4 card-bg rounded-3'>
         <div className="card-img-container">
-        <img className='chef-photo' src={image} alt="" />
+        <LazyLoadImage className='chef-photo' src={image} alt="" />
         </div>
         <div className='p-3'>
         <h2 className='chef-name'>{name}</h2>

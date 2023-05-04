@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Header.css";
 import { Carousel } from "react-bootstrap";
 import corousel1 from "../../assets/corousel1.jpg";
@@ -11,7 +12,7 @@ const Header = () => {
       <div className="corousel-container">
         <Carousel>
           <Carousel.Item>
-            <img
+            <LazyLoadImage
               height={500}
               className="d-block img-fluid"
               src={corousel1}
@@ -23,7 +24,7 @@ const Header = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="bg-dark">
-            <img
+            <LazyLoadImage
               className="d-block img-fluid"
               src={corousel2}
               alt="Second slide"
@@ -35,7 +36,7 @@ const Header = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img
+            <LazyLoadImage
               className="d-block img-fluid"
               src={corousel3}
               alt="Third slide"

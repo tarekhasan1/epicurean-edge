@@ -11,6 +11,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
+import { Spinner } from "react-bootstrap";
 
 export const AuthContext = createContext(null);
 
@@ -77,6 +78,12 @@ const AuthProvider = ({ children }) => {
   };
   return (
     <AuthContext.Provider value={authInfo}>
+      {loading && (
+        <div className="vw-100 vh-100 d-flex justify-content-center align-items-center">
+          {" "}
+          <Spinner />
+        </div>
+      )}
       {!loading && children}
     </AuthContext.Provider>
   );

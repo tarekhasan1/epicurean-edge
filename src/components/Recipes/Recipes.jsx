@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Recipes.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
@@ -15,7 +16,7 @@ const Recipes = () => {
         <div className="chefs-banner chefs-bg">
         <Row className="p-2 mb-5">
           <Col sm={6} className="p-5">
-          <img src={chefData.image} alt="" />
+          <LazyLoadImage src={chefData.image} alt="" />
           </Col>
           <Col className="p-4 d-flex align-items-center" sm={6}>
           <div>
