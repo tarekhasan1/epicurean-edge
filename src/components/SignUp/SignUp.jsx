@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './SignUp.css'
 import Footer from '../Footer/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import { AuthContext } from '../../providers/AuthProvider';
 
@@ -10,9 +10,11 @@ const SignUp = () => {
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [accepted, setAccepted] = useState(false);
+    const navigate = useNavigate();
 
     const handleRegister = event =>{
         event.preventDefault();
+        setError('');
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
@@ -21,14 +23,37 @@ const SignUp = () => {
         const confirm = form.confirm.value;
 
         console.log(name,email,photo,password,confirm);
+
+        if(!/(?=.*[A-Z])/.test(password)){
+            setError('Please add at least one uppercase');
+            return;
+        }
+
+        else if(!/(?=.*[0-9].*[0-9])/.test(password)){
+           setError('Please add at least two digits');
+           return;
+        }
+
+        else if(password.length<6){
+            setError('Please add at least 6 character in your password');
+            return;
+        }
+
+        else if(!(password === confirm)){
+            setError('Password Not Matched! Please Check!')
+            return;
+        }
+
+
         createUser(email, password)
         .then(result =>{
             const createdUser = result.user;
             console.log(createdUser);
+            navigate('/');
         })
-        .catch(error =>{
-            console.log(error);
-            setError(error);
+        .catch(err =>{
+            console.log(err);
+            setError(err.message);
         })
     }
 
@@ -51,7 +76,7 @@ const SignUp = () => {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPhoto">
           <Form.Label>Photo Url</Form.Label>
-          <Form.Control type="text" name="photo" placeholder="Upload will take place" />
+          <Form.Control type="text" name="photo" placeholder="Paste Your Photo Url" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
           <Form.Label>Password</Form.Label>
@@ -69,8 +94,8 @@ const SignUp = () => {
          label="Accept Terms and Conditions"></Form.Check>
         </Form.Group>
         <input disabled={!accepted} className="btn btn-secondary px-5 mb-3" type="submit" name="submit" id="submit" />
+        <p className='text-error text-danger'>{error}</p>
         <p>Already have an account? <Link to='/login'>Login</Link></p>
-        <p className='text-error text-danger'>error message</p>
       </Form>
     </div>
         </div>
