@@ -100,7 +100,7 @@ const Blog = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card className="mt-3 bg-success">
+          <Card className="mt-3 mb-3 bg-success">
             <Card.Body>
               <Card.Title>
                 4. What is a custom hook, and why will you create a custom hook?
