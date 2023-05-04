@@ -12,6 +12,7 @@ import Recipes from "../components/Recipes/Recipes";
 import recipesLoader from "../loaders/recipesLoader";
 import PrivateRoute from "./PrivateRoute";
 import CustomerTestimonials from "../components/CustomerTestimonials/CustomerTestimonials";
+import ContactUs from "../components/ContactUs/ContactUs";
 
 
 const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
             {
                 path: '/testimonials',
                 element: <CustomerTestimonials></CustomerTestimonials>
+            },
+            {
+                path: '/contact',
+                element: <ContactUs></ContactUs>
             }
         ]
     }

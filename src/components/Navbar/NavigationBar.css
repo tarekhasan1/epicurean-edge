@@ -1,9 +1,18 @@
-.background-color{
-    background-color: #080a3f;
+.background-color {
+  background-color: #080a3f;
 }
 
-.img-control{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+.img-control {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.background-color a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+}
+.active-route {
+  color: #fff !important;
 }
