@@ -24,7 +24,7 @@ const NavigationBar = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand href="/">Epicurean-Edge</Navbar.Brand>
+          <Navbar.Brand className="text-success" href="/">Epicurean-Edge</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">

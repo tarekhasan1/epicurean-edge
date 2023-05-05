@@ -5,6 +5,7 @@ import './Home.css'
 import { useLoaderData } from 'react-router-dom';
 import CustomerTestimonials from '../CustomerTestimonials/CustomerTestimonials';
 import PreBookSection from '../PreBookSection/PreBookSection';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
 
@@ -12,7 +13,7 @@ const Home = () => {
     console.log('chefs data:', chefs);
     return (
         <div>
-        <Header></Header>
+        <Banner></Banner>
             <div className='container  mx-auto chef-card row m-0 p-2'>
             <div className="row justify-content-center">
             <div className="col-md-8 text-center my-4">

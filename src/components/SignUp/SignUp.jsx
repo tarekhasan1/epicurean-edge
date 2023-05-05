@@ -51,8 +51,9 @@ const SignUp = () => {
   };
 
   return (
+    <div className="signup-background-control">
     <div>
-      <div className="container">
+      <div className="container-fluid mx-auto">
         <h2 className="text-center mt-3">Sign Up</h2>
         <Form onSubmit={handleRegister} className="w-50 mx-auto">
           <Form.Group className="mb-3" controlId="formGroupName">
@@ -61,11 +62,17 @@ const SignUp = () => {
               type="text"
               name="name"
               placeholder="Enter Your Name"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" name="email" placeholder="Enter email" />
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              required
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupPhoto">
             <Form.Label>Photo Url</Form.Label>
@@ -73,6 +80,7 @@ const SignUp = () => {
               type="text"
               name="photo"
               placeholder="Paste Your Photo Url"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupPassword">
@@ -81,6 +89,7 @@ const SignUp = () => {
               type="password"
               name="password"
               placeholder="Password"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupRePassword">
@@ -89,6 +98,7 @@ const SignUp = () => {
               type="password"
               name="confirm"
               placeholder="Confirm Password"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -108,10 +118,11 @@ const SignUp = () => {
           />
           <p className="text-error text-danger">{error}</p>
           <p>
-            Already have an account? <Link to="/login">Login</Link>
+            Already have an account? <Link className="fs-3 login-btn" to="/login">Login</Link>
           </p>
         </Form>
       </div>
+    </div>
     </div>
   );
 };

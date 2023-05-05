@@ -8,9 +8,10 @@ const Banner = () => {
       <Container>
         <Row>
           <Col md={6}>
+            <h1 className='text-success'>Epicurean Edge</h1>
             <h1>Authentic Thai Cuisine</h1>
             <p>Discover the delicious flavors of Thailand</p>
-            <button className="btn btn-warning">View Menu</button>
+            <button className="btn btn-warning">View Offer</button>
           </Col>
         </Row>
       </Container>

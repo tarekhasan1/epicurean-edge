@@ -11,6 +11,7 @@ const Chefs = (props) => {
 
     return (
         <div className='chef-card-height col-sm-12 col-md-6 col-lg-4 p-2'>
+        <div className='p-4'>
         <div className='mb-4 card-bg rounded-3'>
         <div className="card-img-container">
         <LazyLoadImage className='chef-photo' src={image} alt="" />
@@ -26,6 +27,7 @@ const Chefs = (props) => {
         <button onClick={() =>{
             navigate(`/recipes/${id}`)
         }} className='btn btn-success mx-auto w-75 py-2 rounded-3 m-3'>View Recipes</button>
+        </div>
         </div>
         </div>
         </div>
