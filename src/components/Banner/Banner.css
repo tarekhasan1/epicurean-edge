@@ -1,0 +1,27 @@
+.banner {
+    background-image: url('https://t3.ftcdn.net/jpg/04/42/06/34/360_F_442063430_OjLo5sHK0twuUk2hCGWpjLphEHiLcamL.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .banner h1 {
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .banner p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .banner button {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
