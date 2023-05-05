@@ -1,0 +1,15 @@
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .user-profile h2 {
+    margin-top: 0;
+  }
+  
+  .user-profile p {
+    margin-bottom: 10px;
+  }
+  

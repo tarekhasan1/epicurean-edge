@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { NavDropdown, Container, Nav, Navbar, Button } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./NavigationBar.css";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const NavigationBar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     logOut()
@@ -14,6 +15,11 @@ const NavigationBar = () => {
         console.log(error);
       });
   };
+
+
+  const handleProfile = () =>{
+    navigate('/profile');
+  }
 
   return (
     <div>
@@ -52,6 +58,7 @@ const NavigationBar = () => {
                 <>
                   <div className="d-flex align-items-center">
                   <img
+                  onClick={handleProfile}
                     className="img-control me-2"
                     src={user.photoURL}
                     alt=""
