@@ -4,7 +4,7 @@ import './PreBookSection.css';
 const PreBookSection = () => {
   return (
     <div 
-      className="prebook-section bg-img d-flex flex-column justify-content-center align-items-center text-white"
+      className="prebook-section bg-img d-flex flex-column justify-content-center align-items-center text-white" loading="lazy"
     >
       <h2>Pre-Book Your Table Today</h2>
       <p>We highly recommend making a reservation in advance to ensure your preferred date and time are available.</p>

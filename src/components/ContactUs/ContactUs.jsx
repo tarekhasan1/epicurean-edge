@@ -18,7 +18,7 @@ const ContactUs = () => {
     };
   
     return (
-      <div className='background-control height-control'>
+      <div className='background-control height-control' loading="lazy">
       <Container className="mx-auto">
         <Row>
           <Col xs={12} md={8} lg={6} className="mx-auto">

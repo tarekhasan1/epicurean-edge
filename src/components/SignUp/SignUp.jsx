@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import "./SignUp.css";
-import Footer from "../Footer/Footer";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -51,7 +50,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="signup-background-control">
+    <div className="signup-background-control" loading="lazy">
     <div>
       <div className="container-fluid mx-auto">
         <h2 className="text-center mt-3">Sign Up</h2>

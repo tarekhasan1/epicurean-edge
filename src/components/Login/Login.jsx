@@ -60,7 +60,7 @@ const Login = () => {
   };
 
   return (
-    <div  className="login-background-control">
+    <div  className="login-background-control" loading="lazy">
     <div className="d-flex align-items-center justify-content-center height-control">
       <Container className="mx-auto w-50">
         <h2 className="text-center">Please Login</h2>

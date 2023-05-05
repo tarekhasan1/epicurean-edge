@@ -28,7 +28,7 @@ const CustomerTestimonials = () => {
 
   return (
     <section id="testimonials">
-      <div className="testimonials-banner text-success rounded-3" style={{ backgroundImage: `url(${bannerImage})` }}>
+      <div className="testimonials-banner text-success rounded-3" style={{ backgroundImage: `url(${bannerImage})` }} loading="lazy">
         <div className="container-fluid py-5">
           <div className="row justify-content-center">
             {testimonials.map((testimonial, index) => (

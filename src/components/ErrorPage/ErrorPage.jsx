@@ -1,6 +1,7 @@
 import React from 'react';
 import './ErrorPage.css'
 import { Link, useRouteError } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ErrorPage = () => {
     const error = useRouteError();
@@ -11,7 +12,7 @@ const ErrorPage = () => {
             id="error-page">
             <div>
                 <div>
-                <img className='img-fluid' src="https://cdn.dribbble.com/users/1818132/screenshots/4264991/media/d625b6be8b5ae2a1aa080d1bbc560e0a.gif" alt="" />
+                <LazyLoadImage className='img-fluid' src="https://cdn.dribbble.com/users/1818132/screenshots/4264991/media/d625b6be8b5ae2a1aa080d1bbc560e0a.gif" alt="" />
                 </div>
                     <div className='rounded text-center'>
                     <i className="fw-bold fs-3">
