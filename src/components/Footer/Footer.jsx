@@ -26,7 +26,7 @@ const Footer = () => {
                         target="_blank"
                     >
                         {" "}
-                        <i className="fab fa-facebook"></i>{" "}
+                        <i className="fab fa-facebook" style={{color: "#3b5998"}}></i>{" "}
                     </a>
                     <a
                         href="https://www.youtube.com"
@@ -34,7 +34,7 @@ const Footer = () => {
                         target="_blank"
                     >
                         {" "}
-                        <i className="fab fa-youtube"></i>{" "}
+                        <i className="fab fa-youtube" style={{color: "#ff0000"}}></i>{" "}
                     </a>
                     <a
                         href="https://www.instagram.com"
@@ -42,7 +42,7 @@ const Footer = () => {
                         target="_blank"
                     >
                         {" "}
-                        <i className="fab fa-instagram"></i>{" "}
+                        <i className="fab fa-instagram" style={{color: "#feda75"}}></i>{" "}
                     </a>
                     <a
                         href="https://www.linkedin.com"
@@ -50,7 +50,7 @@ const Footer = () => {
                         target="_blank"
                     >
                         {" "}
-                        <i className="fab fa-linkedin"></i>{" "}
+                        <i className="fab fa-linkedin" style={{color: "#0072b1"}}></i>{" "}
                     </a>
                     <a
                         href="https://www.twitter.com"
@@ -58,7 +58,7 @@ const Footer = () => {
                         target="_blank"
                     >
                         {" "}
-                        <i className="fab fa-twitter"></i>{" "}
+                        <i className="fab fa-twitter" style={{color: "#00acee"}}></i>{" "}
                     </a>
                 </div>
             </section>
