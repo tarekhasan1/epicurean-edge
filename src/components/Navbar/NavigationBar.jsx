@@ -50,6 +50,7 @@ const NavigationBar = () => {
             <Nav>
               {user ? (
                 <>
+                  <div className="d-flex align-items-center">
                   <img
                     className="img-control me-2"
                     src={user.photoURL}
@@ -61,6 +62,7 @@ const NavigationBar = () => {
                       Log Out
                     </Button>
                   </Link>
+                  </div>
                 </>
               ) : (
                 <Link to="/login">
