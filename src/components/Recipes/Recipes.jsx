@@ -22,9 +22,9 @@ const Recipes = () => {
           <div>
           <h1>{chefData.name}</h1>
           <p>{chefData.description}</p>
-          <p>Total recipes: {chefData.numRecipes}</p>
-          <p>{chefData.experience} Years Of Experience</p>
-          <p>Likes: {chefData.likes}</p>
+          <p className="text-success">{chefData.experience} Years Of Experience</p>
+          <p className="text-warning">Total recipes: {chefData.numRecipes}</p>
+          <p className="text-danger">Likes: <i className="fa-sharp fa-solid text-danger fa-heart"> </i>{chefData.likes}</p>
           </div>
           </Col>
         </Row>

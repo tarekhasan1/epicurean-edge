@@ -31,3 +31,20 @@
     color: #39f581a2;
 }
 
+@media only screen and (max-width: 767px) {
+    .chef-card-height{
+        height: 680px;
+        margin-left: 10px 5px 10px 5px;
+    }
+
+    .padding-for-phone{
+        padding: 5px !important;
+    }
+
+    .chef-photo{
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+    }
+  }
+

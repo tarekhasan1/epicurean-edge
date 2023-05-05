@@ -27,7 +27,7 @@ const RecipeCard = (props) => {
           </Toast.Body>
         </Toast>
       </div>
-      <Row className="m-5 recipe-card-container align-items-center">
+      <Row className="m-5 recipe-card-container align-items-center margin-for-phone">
         <Col className="img-container" sm={4}>
           <img className="food-img" src={image} alt="" />
         </Col>
@@ -54,7 +54,7 @@ const RecipeCard = (props) => {
               <Button
                 onClick={handleButton}
                 disabled={buttonDisabled}
-                className="mb-3 w-50"
+                className="mb-3 btn-for-phone w-50"
                 variant="outline-danger"
               >
                 {

@@ -13,7 +13,7 @@ const Chefs = (props) => {
 
   return (
     <div className="chef-card-height col-sm-12 col-md-6 col-lg-4 p-2">
-      <div className="p-4">
+      <div className="p-4 padding-for-phone">
         <div className="mb-4 card-bg rounded-3">
           <div className="card-img-container">
             <LazyLoadImage className="chef-photo" src={image} alt="" />

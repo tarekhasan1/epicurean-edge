@@ -14,3 +14,13 @@
     justify-content: center;
   }
   
+
+  @media only screen and (max-width: 767px) {
+    .margin-for-phone{
+        margin: 10px auto !important;
+    }
+
+    .btn-for-phone{
+        width: 75% !important;
+    }
+  }
